@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 	public int money = 1;
 	public int Health { get; set; }
 
-	public event Action<int> Death;
+	public event Action<int,Enemy> Death;
 
 	private SplineAnimate splineAnimate;
 
@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
 
 	private void Die()
 	{
-		Death.Invoke(money);
+		Death.Invoke(money, this);
 		splineAnimate.Completed -= Goal;
 		Destroy(this.gameObject);
 	}
