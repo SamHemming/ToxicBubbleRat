@@ -17,8 +17,8 @@ MonoBehaviour:
     - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
       startDelay: 0
       spawnInterval: 1
-      amount: 10
+      amount: 100
     - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
       startDelay: 5
       spawnInterval: 0.4
-      amount: 10
+      amount: 100

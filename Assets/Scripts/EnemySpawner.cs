@@ -21,6 +21,10 @@ public class EnemySpawner : MonoBehaviour
 
 	public SplineContainer path;
 
+	public float pitch = 1;
+	public float pitchVariance = 1.0f;
+	public AudioClip clip;
+
 	public UnityEvent<string> OnMoneyChange;
 	public UnityEvent<string> OnWaveChange;
 	public UnityEvent<string> OnLifeChange;
@@ -28,6 +32,8 @@ public class EnemySpawner : MonoBehaviour
 
 	[HideInInspector]
 	public List<Enemy> enemies = new List<Enemy>();
+
+	private AudioSource audioSource;
 
 	private void Awake()
 	{
@@ -46,6 +52,7 @@ public class EnemySpawner : MonoBehaviour
 		OnMoneyChange?.Invoke(money.ToString());
 		OnWaveChange?.Invoke(waveCounter.ToString());
 		OnLifeChange?.Invoke(health.ToString());
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	private void StartSpawnCoroutines(int waveIndex)
@@ -101,6 +108,7 @@ public class EnemySpawner : MonoBehaviour
 
 	private void EnemyDied(int value, Enemy enemy)
 	{
+		Pop();
 		money += value;
 		OnMoneyChange?.Invoke(money.ToString());
 		enemies.Remove(enemy);
@@ -116,5 +124,12 @@ public class EnemySpawner : MonoBehaviour
 			//GameOver man. Gameover...
 			Debug.Log("GameOver!");
 		}
+	}
+
+	private void Pop()
+	{
+		audioSource.pitch = pitch + (UnityEngine.Random.Range(0, pitchVariance) * (UnityEngine.Random.value > 0.5f ? 1 : -1));
+
+		audioSource.PlayOneShot(clip);
 	}
 }
