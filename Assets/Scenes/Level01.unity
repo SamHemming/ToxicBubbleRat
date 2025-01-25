@@ -1255,8 +1255,8 @@ Tilemap:
   - first: {x: 2, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1265,8 +1265,8 @@ Tilemap:
   - first: {x: 3, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 9
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1415,8 +1415,8 @@ Tilemap:
   - first: {x: 2, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1425,8 +1425,8 @@ Tilemap:
   - first: {x: 3, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2116,50 +2116,50 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 4ea95116fed0b5d40a1448a2bd4ea4de, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 765e6c679a012844a9a593274803bddc, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 7b316ab557f38504aabb3bfb14827b24, type: 2}
-  - m_RefCount: 28
+  - m_RefCount: 26
     m_Data: {fileID: 11400000, guid: 97c8cd83a3168c943a6a110b1bbd9af1, type: 2}
   - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: cec42fe334770bd42bf5a55c942316b2, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: ae8ce35db48994d439c6997f3729d529, type: 2}
-  - m_RefCount: 28
+  - m_RefCount: 26
     m_Data: {fileID: 11400000, guid: 1d5477703113b0549ab4797cea6fbabe, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 9d21a5f4dd33a294aa99159aec34a356, type: 2}
   - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: 98e08d43767053f40aa7e9667142c996, type: 2}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 73cd73200501676489e74814b107dac2, type: 2}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: bfc9e30a790b7d149b3506514b35e7f5, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 2af5a0e74b90e6e4ca97a7ba4c366128, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -633582612, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: -1448125173, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -1265558903, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
-  - m_RefCount: 28
+  - m_RefCount: 26
     m_Data: {fileID: -897346705, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
   - m_RefCount: 23
     m_Data: {fileID: -2070115661, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 1735967088, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
-  - m_RefCount: 28
+  - m_RefCount: 26
     m_Data: {fileID: 1988429803, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 1033683034, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
   - m_RefCount: 23
     m_Data: {fileID: -739345073, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 1411949088, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 1162356908, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1233713237, guid: b0ebb7f906bc0254f9a26b7e43e7b3c9, type: 3}
@@ -2184,17 +2184,17 @@ Tilemap:
       e33: 1
   - m_RefCount: 0
     m_Data:
-      e00: -4.7265146e+28
-      e01: 4e-45
+      e00: -4.726288e+28
+      e01: 3e-45
       e02: 3.789323e-12
       e03: 0
       e10: 3.39e-43
-      e11: NaN
+      e11: 8e-45
       e12: 4.5904e-41
       e13: 0
-      e20: NaN
+      e20: 6.3207e-41
       e21: 0
-      e22: -4.726507e+28
+      e22: -4.7262804e+28
       e23: 0
       e30: 0
       e31: 7.34684e-40
