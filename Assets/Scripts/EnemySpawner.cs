@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Splines;
 
 public class EnemySpawner : MonoBehaviour
@@ -15,10 +16,14 @@ public class EnemySpawner : MonoBehaviour
 
 	public int LiveEnemyCount { get => enemies.Count; }
 
-	public event Action<int> Money;
-
 	public SplineContainer path;
 
+	public UnityEvent<string> OnMoneyChange;
+	public UnityEvent<string> OnWaveChange;
+	public UnityEvent<string> OnLifeChange;
+
+
+	[HideInInspector]
 	public List<Enemy> enemies = new List<Enemy>();
 
 	private void Awake()
@@ -59,12 +64,12 @@ public class EnemySpawner : MonoBehaviour
 	}
 
 	[ContextMenu("SendNextWave")]
-	public int SendNextWave()
+	public void SendNextWave()
 	{
 		if (!spawnPattern)
 		{
 			Debug.LogError($"{this.name}: spawnPattern not found!\nCant do shit, help!");
-			return -1;
+			return;
 		}
 
 		if (waveCounter >= spawnPattern.enemyWaves.Count)
@@ -78,12 +83,12 @@ public class EnemySpawner : MonoBehaviour
 
 		waveCounter++;
 
-		return waveCounter;
+		return;
 	}
 
 	private void EnemyDied(int value, Enemy enemy)
 	{
-		Money?.Invoke(value);
+		OnMoneyChange?.Invoke(value.ToString());
 		enemies.Remove(enemy);
 	}
 }

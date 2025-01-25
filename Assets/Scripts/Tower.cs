@@ -16,6 +16,11 @@ public class Tower : MonoBehaviour
 	private float projectileSpeed = 1;
 
 	[SerializeField]
+	private float projectileRotationSpeedMin = 0;
+	[SerializeField]
+	private float projectileRotationSpeedMax = 0;
+
+	[SerializeField]
 	private GameObject projectile;
 
 	[SerializeField]
@@ -46,6 +51,7 @@ public class Tower : MonoBehaviour
 	{
 		var ammo = Instantiate(projectile, this.transform).GetComponent<Projectile>();
 		ammo.speed = projectileSpeed;
+		ammo.rotationSpeed = Random.Range(projectileRotationSpeedMin, projectileRotationSpeedMax) * (Random.value > 0.5f ? 1 : -1) ;
 		ammo.heading = (target.transform.position - this.transform.position).normalized;
 		ammo.GetComponent<SpriteRenderer>().sprite = projectileSkins[Random.Range(0,projectileSkins.Count)];
 	}

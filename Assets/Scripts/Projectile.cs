@@ -11,12 +11,16 @@ public class Projectile : MonoBehaviour
 	public float lifeSpan = 1f;
 	public Vector2 heading = Vector2.zero;
 
+	private bool isSpent = false;
+
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
+		if(isSpent) return;
 		Enemy target = collision.collider.GetComponent<Enemy>();
 		if (target == null) return; //didn't hit enemy
 
 		target.Damage(damage);
+		isSpent = true;
 
 		Destroy(this.gameObject);
 	}

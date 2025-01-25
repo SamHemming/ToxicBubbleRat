@@ -49,12 +49,13 @@ MonoBehaviour:
   range: 2.75
   attackingInterval: 1
   projectileSpeed: 5
+  projectileRotationSpeedMin: 2
+  projectileRotationSpeedMax: 10
   projectile: {fileID: 4920507179896888213, guid: 8489bd7792c7b5f4a94a854666e81b38, type: 3}
   projectileSkins:
-  - {fileID: -7087212671766255247, guid: 8bf876d13dfbeed4080d770eeb11d75b, type: 3}
-  - {fileID: 1459231147152309184, guid: 8bf876d13dfbeed4080d770eeb11d75b, type: 3}
-  - {fileID: -3524491891052597004, guid: 8bf876d13dfbeed4080d770eeb11d75b, type: 3}
-  - {fileID: 250858076551090465, guid: 8bf876d13dfbeed4080d770eeb11d75b, type: 3}
+  - {fileID: 21300000, guid: cefeb54fe1a1b03439ecb6816f2a6c87, type: 3}
+  - {fileID: 21300000, guid: 06de6dd3b01cdd24fb7197f946c7b6d7, type: 3}
+  - {fileID: 21300000, guid: eb5c2b285f7c3f74fa521f00e2d86e48, type: 3}
 --- !u!1001 &3854800475596958290
 PrefabInstance:
   m_ObjectHideFlags: 0
