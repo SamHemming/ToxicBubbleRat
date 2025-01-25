@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
 	public SplineContainer path;
 
-	private List<Enemy> enemies = new List<Enemy>();
+	public List<Enemy> enemies = new List<Enemy>();
 
 	private void Awake()
 	{
@@ -83,7 +83,7 @@ public class EnemySpawner : MonoBehaviour
 
 	private void EnemyDied(int value, Enemy enemy)
 	{
-		Money.Invoke(value);
+		Money?.Invoke(value);
 		enemies.Remove(enemy);
 	}
 }

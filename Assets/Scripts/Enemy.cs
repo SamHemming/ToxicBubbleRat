@@ -8,7 +8,7 @@ using UnityEngine.Splines;
 public class Enemy : MonoBehaviour
 {
 	public int money = 1;
-	public int Health { get; set; }
+	public int health = 1;
 
 	public event Action<int,Enemy> Death;
 
@@ -34,9 +34,9 @@ public class Enemy : MonoBehaviour
 
 	public void Damage(int amount)
 	{
-		Health -= amount;
+		health -= amount;
 
-		if (Health <= 0) Die();
+		if (health <= 0) Die();
 	}
 
 	private void Die()
