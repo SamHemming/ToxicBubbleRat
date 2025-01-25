@@ -7,6 +7,9 @@ using UnityEngine.Splines;
 
 public class EnemySpawner : MonoBehaviour
 {
+	public int money = 0;
+	public int health = 100;
+
 	public static EnemySpawner Instance { get; private set; }
 
 	[SerializeField] private SpawnPattern spawnPattern = null;
@@ -38,6 +41,13 @@ public class EnemySpawner : MonoBehaviour
 		}
 	}
 
+	private void Start()
+	{
+		OnMoneyChange?.Invoke(money.ToString());
+		OnWaveChange?.Invoke(waveCounter.ToString());
+		OnLifeChange?.Invoke(health.ToString());
+	}
+
 	private void StartSpawnCoroutines(int waveIndex)
 	{
 		foreach(EnemyStack stack in spawnPattern.enemyWaves[waveIndex].wave)
@@ -54,7 +64,8 @@ public class EnemySpawner : MonoBehaviour
 		{
 			var enemy = Instantiate(stack.enemyType, this.transform).GetComponent<Enemy>();
 
-			enemy.Death += EnemyDied;
+			enemy.Death.AddListener(EnemyDied);
+			enemy.Escape.AddListener(HealthLost);
 			enemy.Path = path;
 
 			enemies.Add(enemy);
@@ -83,12 +94,27 @@ public class EnemySpawner : MonoBehaviour
 
 		waveCounter++;
 
+		OnWaveChange?.Invoke(waveCounter.ToString());
+
 		return;
 	}
 
 	private void EnemyDied(int value, Enemy enemy)
 	{
-		OnMoneyChange?.Invoke(value.ToString());
+		money += value;
+		OnMoneyChange?.Invoke(money.ToString());
 		enemies.Remove(enemy);
+	}
+
+	private void HealthLost(int value)
+	{
+		health -= value;
+		OnLifeChange?.Invoke(health.ToString());
+
+		if (health <= 0)
+		{
+			//GameOver man. Gameover...
+			Debug.Log("GameOver!");
+		}
 	}
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Splines;
 
 [RequireComponent(typeof(SplineAnimate))]
@@ -9,8 +10,10 @@ public class Enemy : MonoBehaviour
 {
 	public int money = 1;
 	public int health = 1;
+	public int damage = 1;
 
-	public event Action<int,Enemy> Death;
+	public UnityEvent<int,Enemy> Death;
+	public UnityEvent<int> Escape;
 
 	private SplineAnimate splineAnimate;
 
@@ -41,13 +44,13 @@ public class Enemy : MonoBehaviour
 
 	private void Die()
 	{
-		Death.Invoke(money, this);
+		Death?.Invoke(money, this);
 		splineAnimate.Completed -= Goal;
 		Destroy(this.gameObject);
 	}
 
 	private void Goal()
 	{
-		Debug.Log($"{this.name}: GOAL!");
+		Escape?.Invoke(damage);
 	}
 }

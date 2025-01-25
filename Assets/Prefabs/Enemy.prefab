@@ -103,7 +103,7 @@ MonoBehaviour:
   m_PlayOnAwake: 1
   m_LoopMode: 0
   m_Method: 0
-  m_Duration: 25
+  m_Duration: 15
   m_MaxSpeed: 0.7647412
   m_EasingMode: 0
   m_AlignmentMode: 0
@@ -158,3 +158,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 1
+  health: 1
+  damage: 1
+  Death:
+    m_PersistentCalls:
+      m_Calls: []
+  Escape:
+    m_PersistentCalls:
+      m_Calls: []
