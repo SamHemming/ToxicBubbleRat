@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8474370038250935603}
   - component: {fileID: 1537675725043737197}
   m_Layer: 0
-  m_Name: Enemy_Purple
+  m_Name: Enemy_Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3083aeb0d614d304b873762b619983d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 854f84f225bcebb42ab76d43c3e13a10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_PlayOnAwake: 1
   m_LoopMode: 0
   m_Method: 0
-  m_Duration: 10
+  m_Duration: 15
   m_MaxSpeed: 0.7647412
   m_EasingMode: 0
   m_AlignmentMode: 0
@@ -157,9 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9345de3a4423efd4893e4e5aa75998c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 2
-  health: 1
-  damage: 2
+  money: 3
+  health: 2
+  damage: 1
   Death:
     m_PersistentCalls:
       m_Calls: []

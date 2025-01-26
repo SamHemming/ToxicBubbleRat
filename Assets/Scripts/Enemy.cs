@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
 	public int damage = 1;
 
 	public UnityEvent<int,Enemy> Death;
-	public UnityEvent<int> Escape;
+	public UnityEvent<int, Enemy> Escape;
 
 	private SplineAnimate splineAnimate;
 
@@ -51,6 +51,9 @@ public class Enemy : MonoBehaviour
 
 	private void Goal()
 	{
-		Escape?.Invoke(damage);
+		Escape?.Invoke(damage, this);
+
+		splineAnimate.Completed -= Goal;
+		Destroy(this.gameObject);
 	}
 }

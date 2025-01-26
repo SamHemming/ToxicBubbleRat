@@ -138,10 +138,11 @@ public class EnemySpawner : MonoBehaviour
 
 	}
 
-	private void HealthLost(int value)
+	private void HealthLost(int value, Enemy enemy)
 	{
 		health -= value;
 		OnLifeChange?.Invoke(health.ToString());
+		enemies.Remove(enemy);
 
 		if (health <= 0)
 		{

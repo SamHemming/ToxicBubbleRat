@@ -50,10 +50,10 @@ MonoBehaviour:
   drawRange: 0
   range: 14.6
   attackingInterval: 2
-  projectileSpeed: 15
+  projectileSpeed: 25
   projectileDamage: 5
   projectileLifeSpan: 2
-  projectileSize: 0.3
+  projectileSize: 0.5
   projectileRotationSpeedMin: 2
   projectileRotationSpeedMax: 10
   projectile: {fileID: 4920507179896888213, guid: 8489bd7792c7b5f4a94a854666e81b38, type: 3}
