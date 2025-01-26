@@ -3,10 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.Splines;
 
 public class EnemySpawner : MonoBehaviour
 {
+	public int Money
+	{
+		get => money;
+		set
+		{
+			money = value;
+			OnMoneyChange?.Invoke(money.ToString());
+		}
+	}
+
 	public int money = 0;
 	public int health = 100;
 
@@ -28,12 +39,17 @@ public class EnemySpawner : MonoBehaviour
 	public UnityEvent<string> OnMoneyChange;
 	public UnityEvent<string> OnWaveChange;
 	public UnityEvent<string> OnLifeChange;
+	public UnityEvent OnDeath;
 
 
 	[HideInInspector]
 	public List<Enemy> enemies = new List<Enemy>();
 
 	private AudioSource audioSource;
+
+	private bool isAlldead = true;
+
+
 
 	private void Awake()
 	{
@@ -76,6 +92,7 @@ public class EnemySpawner : MonoBehaviour
 			enemy.Path = path;
 
 			enemies.Add(enemy);
+			isAlldead = false;
 
 			yield return new WaitForSeconds(stack.spawnInterval);
 		}
@@ -90,12 +107,7 @@ public class EnemySpawner : MonoBehaviour
 			return;
 		}
 
-		if (waveCounter >= spawnPattern.enemyWaves.Count)
-		{
-			Debug.Log($"{this.name}: Last wave reached, looping back to start.");
-
-			waveCounter = 0;
-		}
+		if (!isAlldead) { return; }
 
 		StartSpawnCoroutines(waveCounter);
 
@@ -112,6 +124,18 @@ public class EnemySpawner : MonoBehaviour
 		money += value;
 		OnMoneyChange?.Invoke(money.ToString());
 		enemies.Remove(enemy);
+
+		if (enemies.Count == 0)
+		{
+			isAlldead = true;
+
+			if (waveCounter >= spawnPattern.enemyWaves.Count)
+			{
+				//VICTORY!!!
+				SceneChanger.ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
+			}
+		}
+
 	}
 
 	private void HealthLost(int value)
@@ -121,8 +145,18 @@ public class EnemySpawner : MonoBehaviour
 
 		if (health <= 0)
 		{
-			//GameOver man. Gameover...
-			Debug.Log("GameOver!");
+			OnDeath?.Invoke();
+		}
+
+		if (enemies.Count == 0)
+		{
+			isAlldead = true;
+
+			if (waveCounter >= spawnPattern.enemyWaves.Count)
+			{
+				//VICTORY!!!
+				SceneChanger.ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
+			}
 		}
 	}
 

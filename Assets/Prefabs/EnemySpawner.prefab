@@ -46,9 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 500
-  health: 100
+  health: 1
   spawnPattern: {fileID: 11400000, guid: ffe2e4fc55822234e8824d4e8d2ba8f0, type: 2}
   path: {fileID: 0}
+  pitch: 1
+  pitchVariance: 0.2
+  clip: {fileID: 8300000, guid: 05fb364851042ed41a8cd119da5257cb, type: 3}
   OnMoneyChange:
     m_PersistentCalls:
       m_Calls:
@@ -66,7 +69,19 @@ MonoBehaviour:
         m_CallState: 2
   OnWaveChange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnLifeChange:
     m_PersistentCalls:
       m_Calls:
@@ -82,8 +97,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   enemies: []
-  pitchVariance: 1
 --- !u!82 &5998379176630546592
 AudioSource:
   m_ObjectHideFlags: 0
