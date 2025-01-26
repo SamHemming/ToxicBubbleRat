@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464fff6b78afa4e499f39df4d126b6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 500
-  health: 1
+  money: 100
+  health: 50
   spawnPattern: {fileID: 11400000, guid: ffe2e4fc55822234e8824d4e8d2ba8f0, type: 2}
   path: {fileID: 0}
   pitch: 1
@@ -107,7 +107,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -38,9 +38,9 @@ public class TowerShop : MonoBehaviour
 
 		tower.GetComponent<Tower>().enabled = false; //Deactivate Tower component to make tower passive model
 
-		var rb = tower.gameObject.AddComponent<Rigidbody>();
-		rb.useGravity = false;
-		rb.constraints = RigidbodyConstraints.FreezeAll;
+		var rb = tower.gameObject.AddComponent<Rigidbody2D>();
+		rb.useFullKinematicContacts = true;
+		rb.bodyType = RigidbodyType2D.Kinematic;
 
 		var checker = tower.gameObject.AddComponent<CollisionChecker>();
 

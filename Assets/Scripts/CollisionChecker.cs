@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CollisionChecker : MonoBehaviour
 {
+	[SerializeField]
 	private bool isColliding = false;
 	public bool IsColliding
 	{ 
@@ -13,12 +14,12 @@ public class CollisionChecker : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionEnter(Collision collision)
+	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		isColliding = true;
 	}
 
-	private void OnCollisionExit(Collision collision)
+	private void OnCollisionExit2D(Collision2D collision)
 	{
 		isColliding = false;
 	}
