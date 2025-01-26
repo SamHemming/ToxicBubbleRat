@@ -28,6 +28,7 @@ public class EnemySpawner : MonoBehaviour
 	public UnityEvent<string> OnMoneyChange;
 	public UnityEvent<string> OnWaveChange;
 	public UnityEvent<string> OnLifeChange;
+	public UnityEvent OnDeath;
 
 
 	[HideInInspector]
@@ -121,8 +122,7 @@ public class EnemySpawner : MonoBehaviour
 
 		if (health <= 0)
 		{
-			//GameOver man. Gameover...
-			Debug.Log("GameOver!");
+			OnDeath?.Invoke();
 		}
 	}
 
