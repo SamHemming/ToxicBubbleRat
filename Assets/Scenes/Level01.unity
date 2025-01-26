@@ -2939,6 +2939,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 25300750366515290, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 984650358}
+    - target: {fileID: 25300750366515290, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendNextWave
+      objectReference: {fileID: 0}
+    - target: {fileID: 25300750366515290, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EnemySpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 25300750366515290, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2323235742321891549, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
