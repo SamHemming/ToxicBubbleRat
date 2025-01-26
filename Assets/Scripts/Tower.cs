@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
@@ -26,6 +28,13 @@ public class Tower : MonoBehaviour
 	[SerializeField]
 	private List<Sprite> projectileSkins = new List<Sprite>();
 
+	private Animator animator;
+
+	private void Start()
+	{
+		animator = GetComponent<Animator>();
+	}
+
 	private void FixedUpdate()
 	{
 		tillNextAttack -= Time.fixedDeltaTime;
@@ -49,6 +58,7 @@ public class Tower : MonoBehaviour
 
 	private void Attack(Enemy target)
 	{
+		animator.SetTrigger("Attack");
 		var ammo = Instantiate(projectile, this.transform).GetComponent<Projectile>();
 		ammo.speed = projectileSpeed;
 		ammo.rotationSpeed = Random.Range(projectileRotationSpeedMin, projectileRotationSpeedMax) * (Random.value > 0.5f ? 1 : -1) ;
