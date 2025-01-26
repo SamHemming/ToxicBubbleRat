@@ -7,6 +7,16 @@ using UnityEngine.Splines;
 
 public class EnemySpawner : MonoBehaviour
 {
+	public int Money
+	{
+		get => money;
+		set
+		{
+			money = value;
+			OnMoneyChange?.Invoke(money.ToString());
+		}
+	}
+
 	public int money = 0;
 	public int health = 100;
 

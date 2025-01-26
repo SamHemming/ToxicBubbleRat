@@ -22,7 +22,6 @@ public class UIHider : MonoBehaviour
 	public void Reveal()
 	{
 		StartCoroutine(LerpToPos(revealedPos));
-		Debug.Log($"Reveal: {revealedPos}");
 	}
 
 	private IEnumerator LerpToPos(Vector2 targetPos)
