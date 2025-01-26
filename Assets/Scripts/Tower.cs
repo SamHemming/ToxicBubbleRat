@@ -16,6 +16,15 @@ public class Tower : MonoBehaviour
 	private float projectileSpeed = 1;
 
 	[SerializeField]
+	private int projectileDamage = 1;
+
+	[SerializeField]
+	private float projectileLifeSpan = 2;
+
+	[SerializeField]
+	private float projectileSize = 0.3f;
+
+	[SerializeField]
 	private float projectileRotationSpeedMin = 0;
 	[SerializeField]
 	private float projectileRotationSpeedMax = 0;
@@ -30,7 +39,7 @@ public class Tower : MonoBehaviour
 
 	private void Start()
 	{
-		animator = GetComponent<Animator>();
+		animator = GetComponentInChildren<Animator>();
 	}
 
 	private void FixedUpdate()
@@ -58,7 +67,10 @@ public class Tower : MonoBehaviour
 	{
 		animator.SetTrigger("Attack");
 		var ammo = Instantiate(projectile, this.transform).GetComponent<Projectile>();
+		ammo.GetComponent<CircleCollider2D>().radius = projectileSize;
 		ammo.speed = projectileSpeed;
+		ammo.damage = projectileDamage;
+		ammo.lifeSpan = projectileLifeSpan;
 		ammo.rotationSpeed = Random.Range(projectileRotationSpeedMin, projectileRotationSpeedMax) * (Random.value > 0.5f ? 1 : -1) ;
 		ammo.heading = (target.transform.position - this.transform.position).normalized;
 		ammo.GetComponent<SpriteRenderer>().sprite = projectileSkins[Random.Range(0,projectileSkins.Count)];

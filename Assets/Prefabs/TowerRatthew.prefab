@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3308654773909414487}
   - component: {fileID: 8952807749146041999}
-  - component: {fileID: 2095670015365066589}
+  - component: {fileID: -2371445330280862913}
   m_Layer: 0
   m_Name: TowerRatthew
   m_TagString: Untagged
@@ -47,10 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41ccb6005b6e7e4f834217bd00c0c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawRange: 1
-  range: 2.67
-  attackingInterval: 0.25
-  projectileSpeed: 13.43
+  drawRange: 0
+  range: 14.6
+  attackingInterval: 2
+  projectileSpeed: 15
+  projectileDamage: 5
+  projectileLifeSpan: 2
+  projectileSize: 0.3
   projectileRotationSpeedMin: 2
   projectileRotationSpeedMax: 10
   projectile: {fileID: 4920507179896888213, guid: 8489bd7792c7b5f4a94a854666e81b38, type: 3}
@@ -59,27 +62,41 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 06de6dd3b01cdd24fb7197f946c7b6d7, type: 3}
   - {fileID: 21300000, guid: eb5c2b285f7c3f74fa521f00e2d86e48, type: 3}
   - {fileID: 21300000, guid: 422180cb41d17784b986f37ef92688fc, type: 3}
---- !u!95 &2095670015365066589
-Animator:
-  serializedVersion: 5
+--- !u!58 &-2371445330280862913
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4119897663058340070}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 77405aab700b3ea42a58df406012b576, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.020855844, y: -0.22014439}
+  serializedVersion: 2
+  m_Radius: 0.4884135
 --- !u!1 &8351989092214928543
 GameObject:
   m_ObjectHideFlags: 0
