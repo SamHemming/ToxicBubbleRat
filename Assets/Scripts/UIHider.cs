@@ -47,6 +47,7 @@ public class UIHider : MonoBehaviour
 	}
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(UIHider))]
 class UIHiderEditor : Editor
 {
@@ -74,3 +75,4 @@ class UIHiderEditor : Editor
 		DrawDefaultInspector();
 	}
 }
+#endif
