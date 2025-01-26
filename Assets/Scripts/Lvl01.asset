@@ -22,3 +22,47 @@ MonoBehaviour:
       startDelay: 5
       spawnInterval: 0.4
       amount: 100
+  - wave:
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 0
+      spawnInterval: 1
+      amount: 30
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 5
+      spawnInterval: 1.5
+      amount: 20
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 10
+      spawnInterval: 0.5
+      amount: 40
+  - wave:
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 0
+      spawnInterval: 0.2
+      amount: 100
+  - wave:
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 0
+      spawnInterval: 2
+      amount: 20
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 20
+      spawnInterval: 1
+      amount: 50
+  - wave:
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 0
+      spawnInterval: 1
+      amount: 100
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 10
+      spawnInterval: 1
+      amount: 100
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 20
+      spawnInterval: 0.3
+      amount: 100
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 30
+      spawnInterval: 0.1
+      amount: 100
