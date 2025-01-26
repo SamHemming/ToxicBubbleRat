@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41ccb6005b6e7e4f834217bd00c0c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawRange: 0
-  range: 4.7
-  attackingInterval: 1
-  projectileSpeed: 5
+  drawRange: 1
+  range: 2.67
+  attackingInterval: 0.25
+  projectileSpeed: 13.43
   projectileRotationSpeedMin: 2
   projectileRotationSpeedMax: 10
   projectile: {fileID: 4920507179896888213, guid: 8489bd7792c7b5f4a94a854666e81b38, type: 3}
