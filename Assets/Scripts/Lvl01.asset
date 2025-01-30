@@ -17,60 +17,64 @@ MonoBehaviour:
     - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
       startDelay: 0
       spawnInterval: 1
-      amount: 40
+      amount: 20
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 21
+      spawnInterval: 0.8
+      amount: 20
+  - wave:
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 0
+      spawnInterval: 0.5
+      amount: 20
+    - enemyType: {fileID: 3761776499985521567, guid: c507333a6abd0354fb1a3fba35183934, type: 3}
+      startDelay: 10
+      spawnInterval: 0.8
+      amount: 1
+  - wave:
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 0
+      spawnInterval: 0.5
+      amount: 20
+    - enemyType: {fileID: 3761776499985521567, guid: c507333a6abd0354fb1a3fba35183934, type: 3}
+      startDelay: 10
+      spawnInterval: 0.8
+      amount: 1
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 12
+      spawnInterval: 0.5
+      amount: 10
+    - enemyType: {fileID: 3761776499985521567, guid: c507333a6abd0354fb1a3fba35183934, type: 3}
+      startDelay: 20
+      spawnInterval: 1
+      amount: 2
+  - wave:
+    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+      startDelay: 0
+      spawnInterval: 0.5
+      amount: 10
     - enemyType: {fileID: 3761776499985521567, guid: c507333a6abd0354fb1a3fba35183934, type: 3}
       startDelay: 5
-      spawnInterval: 2
-      amount: 20
-    - enemyType: {fileID: 3761776499985521567, guid: 3af1cd8072cd3344e8dabf0aa2b91b4b, type: 3}
-      startDelay: 10
-      spawnInterval: 0.2
-      amount: 15
-    - enemyType: {fileID: 3761776499985521567, guid: 0d6b3b02c6d82c2418fbb863e3a5c4c5, type: 3}
-      startDelay: 5
-      spawnInterval: 5
+      spawnInterval: 0.8
       amount: 5
-  - wave:
     - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
-      startDelay: 0
-      spawnInterval: 1
-      amount: 30
-    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
-      startDelay: 5
-      spawnInterval: 1.5
-      amount: 20
-    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
-      startDelay: 10
+      startDelay: 8
       spawnInterval: 0.5
-      amount: 40
+      amount: 10
+    - enemyType: {fileID: 3761776499985521567, guid: 3af1cd8072cd3344e8dabf0aa2b91b4b, type: 3}
+      startDelay: 14
+      spawnInterval: 1
+      amount: 1
   - wave:
-    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
+    - enemyType: {fileID: 3761776499985521567, guid: c507333a6abd0354fb1a3fba35183934, type: 3}
       startDelay: 0
-      spawnInterval: 0.2
-      amount: 100
-  - wave:
+      spawnInterval: 0.5
+      amount: 10
     - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
-      startDelay: 0
-      spawnInterval: 2
+      startDelay: 8
+      spawnInterval: 0.5
       amount: 20
-    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
-      startDelay: 20
+    - enemyType: {fileID: 3761776499985521567, guid: 0d6b3b02c6d82c2418fbb863e3a5c4c5, type: 3}
+      startDelay: 16
       spawnInterval: 1
-      amount: 50
-  - wave:
-    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
-      startDelay: 0
-      spawnInterval: 1
-      amount: 100
-    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
-      startDelay: 10
-      spawnInterval: 1
-      amount: 100
-    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
-      startDelay: 20
-      spawnInterval: 0.3
-      amount: 100
-    - enemyType: {fileID: 3761776499985521567, guid: 8181bd010bb51ac409a7fa9c8d681684, type: 3}
-      startDelay: 30
-      spawnInterval: 0.1
-      amount: 100
+      amount: 1
