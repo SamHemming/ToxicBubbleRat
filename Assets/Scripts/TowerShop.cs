@@ -9,6 +9,7 @@ public class TowerShop : MonoBehaviour
 {
 	public EnemySpawner enemySpawner;
 	public UIHider shopPanel;
+	public Color cantPlaceColor;
 
 	private void Start()
 	{
@@ -50,6 +51,8 @@ public class TowerShop : MonoBehaviour
 
 		var checker = tower.gameObject.AddComponent<CollisionChecker>();
 
+
+
 		var coroutine = StartCoroutine(CheckLegalPlacement(tower.gameObject));
 		yield return new WaitUntil(() => Input.GetMouseButtonUp(0)); //wait here till mouse release
 
@@ -70,13 +73,34 @@ public class TowerShop : MonoBehaviour
 
 	private IEnumerator CheckLegalPlacement(GameObject tower)
 	{
+		//get all renderers
+		var renderers = tower.GetComponentsInChildren<Renderer>();
+		List<Color> colors = new List<Color>();
+
+		foreach (Renderer renderer in renderers)
+		{ 
+			colors.Add(renderer.material.color);
+		}
+
 		var checker = tower.GetComponent<CollisionChecker>();
+		bool wasColliding = true;
 
 		while (true)
 		{
 			Vector3 spot = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			spot.z = 0;
 			tower.transform.position = spot;
+
+			//change all renderer colors
+			if(checker.IsColliding != wasColliding)
+			{
+				wasColliding = checker.IsColliding;
+
+				for(int i = 0; i < colors.Count; i++)
+				{
+					renderers[i].material.color = wasColliding ? cantPlaceColor : colors[i];
+				}
+			}
 
 			yield return null;
 		}
