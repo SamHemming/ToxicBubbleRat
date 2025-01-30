@@ -38,6 +38,7 @@ public class EnemySpawner : MonoBehaviour
 
 	public UnityEvent<string> OnMoneyChange;
 	public UnityEvent<string> OnWaveChange;
+	public UnityEvent OnWaveClear;
 	public UnityEvent<string> OnLifeChange;
 	public UnityEvent OnDeath;
 
@@ -83,6 +84,8 @@ public class EnemySpawner : MonoBehaviour
 	{
 		yield return new WaitForSeconds(stack.startDelay);
 
+		activeSpawners++;
+
 		for(int i = 0; i < stack.amount; i++)
 		{
 			var enemy = Instantiate(stack.enemyType, this.transform).GetComponent<Enemy>();
@@ -96,6 +99,8 @@ public class EnemySpawner : MonoBehaviour
 
 			yield return new WaitForSeconds(stack.spawnInterval);
 		}
+
+		activeSpawners--;
 	}
 
 	[ContextMenu("SendNextWave")]
@@ -129,6 +134,11 @@ public class EnemySpawner : MonoBehaviour
 		if (enemies.Count == 0)
 		{
 			isAlldead = true;
+
+			if (activeSpawners > 0) { return;}
+
+			//wave clear!
+			OnWaveClear?.Invoke();
 
 			if (waveCounter >= spawnPattern.enemyWaves.Count)
 			{
