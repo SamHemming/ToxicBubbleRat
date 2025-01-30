@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
 
 	private bool isAlldead = true;
 
-
+	private int activeSpawners = 0;
 
 	private void Awake()
 	{
@@ -108,6 +108,7 @@ public class EnemySpawner : MonoBehaviour
 		}
 
 		if (!isAlldead) { return; }
+		if(activeSpawners > 0) { return; }
 
 		StartSpawnCoroutines(waveCounter);
 

@@ -8,9 +8,14 @@ using UnityEngine.EventSystems;
 public class TowerShop : MonoBehaviour
 {
 	public EnemySpawner enemySpawner;
+	public UIHider shopPanel;
 
 	private void Start()
 	{
+
+		if (shopPanel == null) Debug.LogWarning($"{this.name}: shopPanel not set!\nSet shopPanel in the inspector.");
+		if (enemySpawner == null) Debug.LogWarning($"{this.name}: enemySpawner not set!\nSet enemySpawner in the inspector.");
+
 		var purchaseIcon = FindObjectsOfType<PurchaseIcon>();
 
 		foreach (var icon in purchaseIcon)
@@ -27,6 +32,7 @@ public class TowerShop : MonoBehaviour
 		if(icon.Price <= enemySpawner.Money)
 		{
 			StartCoroutine(DragAndDrop(icon));
+			shopPanel.Hide();
 		}
 	}
 
