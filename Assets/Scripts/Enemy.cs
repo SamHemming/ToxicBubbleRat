@@ -12,10 +12,15 @@ public class Enemy : MonoBehaviour
 	public int health = 1;
 	public int damage = 1;
 
+	public Color poppingColor = Color.white;
+
 	public UnityEvent<int,Enemy> Death;
 	public UnityEvent<int, Enemy> Escape;
 
 	private SplineAnimate splineAnimate;
+
+	[HideInInspector]
+	public bool isDone = false;
 
 	public SplineContainer Path
 	{
@@ -46,7 +51,14 @@ public class Enemy : MonoBehaviour
 	{
 		Death?.Invoke(money, this);
 		splineAnimate.Completed -= Goal;
-		Destroy(this.gameObject);
+
+		splineAnimate.Pause();
+		GetComponent<Collider2D>().enabled = false;
+
+		var anim = GetComponent<Animator>();
+		anim.SetTrigger("Pop");
+		GetComponent<SpriteRenderer>().color = poppingColor;
+
 	}
 
 	private void Goal()
@@ -54,6 +66,11 @@ public class Enemy : MonoBehaviour
 		Escape?.Invoke(damage, this);
 
 		splineAnimate.Completed -= Goal;
+		Destroy(this.gameObject);
+	}
+
+	public void Pop()
+	{
 		Destroy(this.gameObject);
 	}
 }

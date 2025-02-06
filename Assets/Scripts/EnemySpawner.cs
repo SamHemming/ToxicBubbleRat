@@ -82,9 +82,9 @@ public class EnemySpawner : MonoBehaviour
 
 	private IEnumerator StackSpawner(EnemyStack stack)
 	{
-		yield return new WaitForSeconds(stack.startDelay);
-
 		activeSpawners++;
+		
+		yield return new WaitForSeconds(stack.startDelay);
 
 		for(int i = 0; i < stack.amount; i++)
 		{
@@ -129,40 +129,30 @@ public class EnemySpawner : MonoBehaviour
 		Pop();
 		money += value;
 		OnMoneyChange?.Invoke(money.ToString());
-		enemies.Remove(enemy);
 
-		if (enemies.Count == 0)
-		{
-			isAlldead = true;
-
-			if (activeSpawners > 0) { return;}
-
-			//wave clear!
-			OnWaveClear?.Invoke();
-
-			if (waveCounter >= spawnPattern.enemyWaves.Count)
-			{
-				//VICTORY!!!
-				SceneChanger.ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
-			}
-		}
-
+		EnemyRemove(enemy);
 	}
 
 	private void HealthLost(int value, Enemy enemy)
 	{
 		health -= value;
 		OnLifeChange?.Invoke(health.ToString());
-		enemies.Remove(enemy);
+		
+		EnemyRemove(enemy);
+	}
 
-		if (health <= 0)
-		{
-			OnDeath?.Invoke();
-		}
+	private void EnemyRemove(Enemy enemy)
+	{
+		enemies.Remove(enemy);
 
 		if (enemies.Count == 0)
 		{
 			isAlldead = true;
+
+			if (activeSpawners > 0) { return; }
+
+			//wave clear!
+			OnWaveClear?.Invoke();
 
 			if (waveCounter >= spawnPattern.enemyWaves.Count)
 			{

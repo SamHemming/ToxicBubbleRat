@@ -50,6 +50,7 @@ public class TowerShop : MonoBehaviour
 		rb.bodyType = RigidbodyType2D.Kinematic;
 
 		var checker = tower.gameObject.AddComponent<CollisionChecker>();
+		tower.SetRangeVisibilty(true);
 
 
 
@@ -66,6 +67,7 @@ public class TowerShop : MonoBehaviour
 			Destroy(checker); // remove CollisionChecker component as it is no longer needed
 			tower.GetComponent<Tower>().enabled = true; // reactivate tower
 			Destroy(rb); //remove unnessesary rigidbody
+			tower.SetRangeVisibilty(false);
 		}
 
 		StopCoroutine(coroutine);

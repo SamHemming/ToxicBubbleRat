@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-	public bool drawRange = false;
+	[SerializeField]
+	private bool drawRange = false;
 	[SerializeField]
 	private float range = 20f;
+
+	[SerializeField]
+	private GameObject rangeObj;
 
 	[SerializeField]
 	private float attackingInterval = 1;
@@ -42,6 +46,11 @@ public class Tower : MonoBehaviour
 		animator = GetComponentInChildren<Animator>();
 	}
 
+	public void SetRangeVisibilty(bool b)
+	{
+		rangeObj.SetActive(b);
+	}
+
 	private void FixedUpdate()
 	{
 		tillNextAttack -= Time.fixedDeltaTime;
@@ -57,11 +66,13 @@ public class Tower : MonoBehaviour
 
 	}
 
+#if UNITY_EDITOR
 	private void OnDrawGizmos()
 	{
 		if (drawRange == false) return;
         Gizmos.DrawWireSphere(transform.position, range);
 	}
+#endif
 
 	private void Attack(Enemy target)
 	{
