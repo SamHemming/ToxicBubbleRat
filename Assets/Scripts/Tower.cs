@@ -16,30 +16,23 @@ public class Tower : MonoBehaviour
 	private float attackingInterval = 1;
 	private float tillNextAttack = 0;
 
-	[SerializeField]
-	private float projectileSpeed = 1;
+	public float projectileSpeed = 1;
 
-	[SerializeField]
-	private int projectileDamage = 1;
+	public int projectileDamage = 1;
 
-	[SerializeField]
-	private float projectileLifeSpan = 2;
+	public float projectileLifeSpan = 2;
 
-	[SerializeField]
-	private float projectileSize = 0.3f;
+	public float projectileSize = 0.3f;
 
-	[SerializeField]
-	private float projectileRotationSpeedMin = 0;
-	[SerializeField]
-	private float projectileRotationSpeedMax = 0;
+	public float projectileRotationSpeedMin = 0;
+	public float projectileRotationSpeedMax = 0;
 
-	[SerializeField]
-	private GameObject projectile;
+	public GameObject projectile;
 
-	[SerializeField]
-	private List<Sprite> projectileSkins = new List<Sprite>();
+	public List<Sprite> projectileSkins = new List<Sprite>();
 
-	private Animator animator;
+	[HideInInspector]
+	public Animator animator;
 
 	private void Start()
 	{
@@ -56,12 +49,11 @@ public class Tower : MonoBehaviour
 		tillNextAttack -= Time.fixedDeltaTime;
 		if (tillNextAttack > 0) return;
 
-		tillNextAttack = attackingInterval;
-
 		Enemy target;
 		if (FindClosestTarget(out target))
 		{
 			Attack(target);
+			tillNextAttack = attackingInterval;
 		}
 
 	}
@@ -74,7 +66,7 @@ public class Tower : MonoBehaviour
 	}
 #endif
 
-	private void Attack(Enemy target)
+	public virtual void Attack(Enemy target)
 	{
 		animator.SetTrigger("Attack");
 		var ammo = Instantiate(projectile, this.transform).GetComponent<Projectile>();

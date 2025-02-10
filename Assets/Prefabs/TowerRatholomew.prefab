@@ -64,6 +64,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 06de6dd3b01cdd24fb7197f946c7b6d7, type: 3}
   - {fileID: 21300000, guid: eb5c2b285f7c3f74fa521f00e2d86e48, type: 3}
   - {fileID: 21300000, guid: 422180cb41d17784b986f37ef92688fc, type: 3}
+  animator: {fileID: 0}
 --- !u!58 &-3986225282765879688
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -171,7 +172,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.5283019, g: 0.48095408, b: 0.48095408, a: 0.44705883}
   m_FlipX: 0

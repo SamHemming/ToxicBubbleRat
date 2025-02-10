@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 2340488085572888805}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0284, y: 0.0263, z: 0}
-  m_LocalScale: {x: 9.281471, y: 9.360852, z: 1}
+  m_LocalPosition: {x: -0.0192, y: 0.0078, z: 0}
+  m_LocalScale: {x: 3.9832273, y: 4.006677, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3308654773909414487}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.509434, g: 0.49741903, b: 0.49741903, a: 0.44705883}
   m_FlipX: 0
@@ -93,8 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3308654773909414487}
-  - component: {fileID: 8952807749146041999}
   - component: {fileID: 2500329115501565995}
+  - component: {fileID: 8329907520349356952}
   m_Layer: 0
   m_Name: TowerRathicus
   m_TagString: Untagged
@@ -120,34 +120,6 @@ Transform:
   - {fileID: 1690704325286898933}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8952807749146041999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4119897663058340070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b41ccb6005b6e7e4f834217bd00c0c11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drawRange: 1
-  range: 4.7
-  rangeObj: {fileID: 2340488085572888805}
-  attackingInterval: 1
-  projectileSpeed: 5
-  projectileDamage: 1
-  projectileLifeSpan: 2
-  projectileSize: 0.3
-  projectileRotationSpeedMin: 2
-  projectileRotationSpeedMax: 10
-  projectile: {fileID: 4920507179896888213, guid: 8489bd7792c7b5f4a94a854666e81b38, type: 3}
-  projectileSkins:
-  - {fileID: 21300000, guid: cefeb54fe1a1b03439ecb6816f2a6c87, type: 3}
-  - {fileID: 21300000, guid: 06de6dd3b01cdd24fb7197f946c7b6d7, type: 3}
-  - {fileID: 21300000, guid: eb5c2b285f7c3f74fa521f00e2d86e48, type: 3}
-  - {fileID: 21300000, guid: 422180cb41d17784b986f37ef92688fc, type: 3}
 --- !u!58 &2500329115501565995
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -183,6 +155,36 @@ CircleCollider2D:
   m_Offset: {x: -0.020855844, y: -0.22014439}
   serializedVersion: 2
   m_Radius: 0.4884135
+--- !u!114 &8329907520349356952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4119897663058340070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fac1eb7b6c9f524b950c871a6e228df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawRange: 1
+  range: 2
+  rangeObj: {fileID: 2340488085572888805}
+  attackingInterval: 2
+  projectileSpeed: 2
+  projectileDamage: 1
+  projectileLifeSpan: 1
+  projectileSize: 0.3
+  projectileRotationSpeedMin: 1
+  projectileRotationSpeedMax: 10
+  projectile: {fileID: 4920507179896888213, guid: 8489bd7792c7b5f4a94a854666e81b38, type: 3}
+  projectileSkins:
+  - {fileID: 21300000, guid: cefeb54fe1a1b03439ecb6816f2a6c87, type: 3}
+  - {fileID: 21300000, guid: 422180cb41d17784b986f37ef92688fc, type: 3}
+  - {fileID: 21300000, guid: 06de6dd3b01cdd24fb7197f946c7b6d7, type: 3}
+  - {fileID: 21300000, guid: eb5c2b285f7c3f74fa521f00e2d86e48, type: 3}
+  animator: {fileID: 0}
+  projectileCount: 6
 --- !u!1 &8351989092214928543
 GameObject:
   m_ObjectHideFlags: 0
