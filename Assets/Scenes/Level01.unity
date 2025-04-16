@@ -4074,6 +4074,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.000045776367
       objectReference: {fileID: 0}
+    - target: {fileID: 1619188021590541523, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: -4957166415676224231, guid: 365cd7e671a3022439d859fd84471cca, type: 3}
     - target: {fileID: 2323235742321891549, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
       propertyPath: m_Pivot.x
       value: 0

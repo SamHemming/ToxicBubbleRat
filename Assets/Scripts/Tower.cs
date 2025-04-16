@@ -13,8 +13,8 @@ public class Tower : MonoBehaviour
 	private GameObject rangeObj;
 
 	[SerializeField]
-	private float attackingInterval = 1;
-	private float tillNextAttack = 0;
+	protected float attackingInterval = 1;
+	protected float tillNextAttack = 0;
 
 	public float projectileSpeed = 1;
 
@@ -44,13 +44,12 @@ public class Tower : MonoBehaviour
 		rangeObj.SetActive(b);
 	}
 
-	private void FixedUpdate()
+	protected virtual void FixedUpdate()
 	{
 		tillNextAttack -= Time.fixedDeltaTime;
 		if (tillNextAttack > 0) return;
 
-		Enemy target;
-		if (FindClosestTarget(out target))
+		if (FindClosestTarget(out Enemy target))
 		{
 			Attack(target);
 			tillNextAttack = attackingInterval;
@@ -79,7 +78,7 @@ public class Tower : MonoBehaviour
 		ammo.GetComponent<SpriteRenderer>().sprite = projectileSkins[Random.Range(0,projectileSkins.Count)];
 	}
 
-	private bool FindClosestTarget(out Enemy target)
+	protected bool FindClosestTarget(out Enemy target)
 	{
         target = null;
 

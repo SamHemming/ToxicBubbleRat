@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3308654773909414487}
-  - component: {fileID: 8952807749146041999}
+  - component: {fileID: -4957166415676224231}
   - component: {fileID: -3986225282765879688}
   m_Layer: 0
   m_Name: TowerRatholomew
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 604028767182843765}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8952807749146041999
+--- !u!114 &-4957166415676224231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,26 +45,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 4119897663058340070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b41ccb6005b6e7e4f834217bd00c0c11, type: 3}
+  m_Script: {fileID: 11500000, guid: a2a850aa77af2364f9c6450776c24af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   drawRange: 1
-  range: 4.7
+  range: 3.32
   rangeObj: {fileID: 6541946910194615611}
   attackingInterval: 1
-  projectileSpeed: 5
+  projectileSpeed: 3.12
   projectileDamage: 1
-  projectileLifeSpan: 2
+  projectileLifeSpan: 10
   projectileSize: 0.3
-  projectileRotationSpeedMin: 2
-  projectileRotationSpeedMax: 10
-  projectile: {fileID: 4920507179896888213, guid: 8489bd7792c7b5f4a94a854666e81b38, type: 3}
+  projectileRotationSpeedMin: 0
+  projectileRotationSpeedMax: 0
+  projectile: {fileID: 4920507179896888213, guid: e1b30fbed5a05d8489e9016a8857a6dd, type: 3}
   projectileSkins:
-  - {fileID: 21300000, guid: cefeb54fe1a1b03439ecb6816f2a6c87, type: 3}
-  - {fileID: 21300000, guid: 06de6dd3b01cdd24fb7197f946c7b6d7, type: 3}
-  - {fileID: 21300000, guid: eb5c2b285f7c3f74fa521f00e2d86e48, type: 3}
-  - {fileID: 21300000, guid: 422180cb41d17784b986f37ef92688fc, type: 3}
+  - {fileID: 21300000, guid: 6e125460e4eca234784a1ad75d3964e6, type: 3}
   animator: {fileID: 0}
+  uptime: 0.5
 --- !u!58 &-3986225282765879688
 CircleCollider2D:
   m_ObjectHideFlags: 0
