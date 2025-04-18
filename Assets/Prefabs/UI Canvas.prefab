@@ -618,10 +618,10 @@ RectTransform:
   - {fileID: 3842750224242613036}
   m_Father: {fileID: 2323235742321891549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.4, y: 1}
-  m_AnchorMax: {x: 0.6, y: 1}
-  m_AnchoredPosition: {x: 0, y: -37.035034}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchorMin: {x: 0.3, y: 1}
+  m_AnchorMax: {x: 0.7, y: 1}
+  m_AnchoredPosition: {x: 0, y: 332.80017}
+  m_SizeDelta: {x: 0, y: 332.8001}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &9153321275550967639
 CanvasRenderer:
@@ -644,14 +644,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.28315237, g: 0.5943396, b: 0.31314704, a: 0.22745098}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 4703776f3c8cc4b4081bf56b0b150c66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionTime: 0.5
   revealedPos: {x: 0, y: 0}
-  hidingPos: {x: 0, y: 100}
+  hidingPos: {x: 0, y: 332.80017}
 --- !u!1 &4299319499077885690
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,12 +930,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
+        m_MethodName: SendNextWave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1550,12 +1550,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 124.54
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 124.54
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1845,6 +1845,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 34ccb8b9cc0973f469c16295b527f353, type: 3}
     - target: {fileID: 5638541480249749415, guid: 26fc0a8c08f669444b7da9d6140393d2, type: 3}
+      propertyPath: price
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638541480249749415, guid: 26fc0a8c08f669444b7da9d6140393d2, type: 3}
       propertyPath: tower
       value: 
       objectReference: {fileID: 8952807749146041999, guid: 85d78c87d8e88044c9358482bce716fd, type: 3}
@@ -1957,7 +1961,7 @@ PrefabInstance:
     - target: {fileID: 5638541480249749415, guid: 26fc0a8c08f669444b7da9d6140393d2, type: 3}
       propertyPath: tower
       value: 
-      objectReference: {fileID: 8952807749146041999, guid: 365cd7e671a3022439d859fd84471cca, type: 3}
+      objectReference: {fileID: -4957166415676224231, guid: 365cd7e671a3022439d859fd84471cca, type: 3}
     - target: {fileID: 7703119835077850486, guid: 26fc0a8c08f669444b7da9d6140393d2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2067,7 +2071,7 @@ PrefabInstance:
     - target: {fileID: 5638541480249749415, guid: 26fc0a8c08f669444b7da9d6140393d2, type: 3}
       propertyPath: tower
       value: 
-      objectReference: {fileID: 8952807749146041999, guid: 2f4f89986a93da74ba3673510d0bda26, type: 3}
+      objectReference: {fileID: 8329907520349356952, guid: 2f4f89986a93da74ba3673510d0bda26, type: 3}
     - target: {fileID: 7703119835077850486, guid: 26fc0a8c08f669444b7da9d6140393d2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
