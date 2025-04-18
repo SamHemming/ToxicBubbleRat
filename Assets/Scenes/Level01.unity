@@ -4066,18 +4066,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 25300750366515290, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 984650358}
-    - target: {fileID: 1160815139548173403, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.000045776367
-      objectReference: {fileID: 0}
-    - target: {fileID: 1619188021590541523, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
-      propertyPath: tower
-      value: 
-      objectReference: {fileID: -4957166415676224231, guid: 365cd7e671a3022439d859fd84471cca, type: 3}
     - target: {fileID: 2323235742321891549, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4162,34 +4150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4495639162343003219, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
-      propertyPath: tower
-      value: 
-      objectReference: {fileID: 8329907520349356952, guid: 2f4f89986a93da74ba3673510d0bda26, type: 3}
-    - target: {fileID: 8205142965993326530, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9016874779181605032, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
-      propertyPath: price
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 9205778760378554456, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 984650358}
-    - target: {fileID: 9205778760378554456, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SendNextWave
-      objectReference: {fileID: 0}
-    - target: {fileID: 9205778760378554456, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: EnemySpawner, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 9205778760378554456, guid: 03eca801d9815504f876a95a29ee20b8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
